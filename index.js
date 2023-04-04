@@ -40,7 +40,7 @@ io.on('connection', socket => {
     socket.on('message', data => {
         contenedorArchivo.agregarMensaje(data)
 
-        io.sockets.emit('mensajes', contenedorArchivo.listarAll())
+        io.sockets.emit('mensajes a mostrar', contenedorArchivo.listarAll())
     })
 })
 
